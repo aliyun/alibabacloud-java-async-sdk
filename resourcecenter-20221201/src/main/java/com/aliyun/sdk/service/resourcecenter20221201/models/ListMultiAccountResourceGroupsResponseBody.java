@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceGroups")
-    private java.util.List < ResourceGroups> resourceGroups;
+    private java.util.List<ResourceGroups> resourceGroups;
 
     private ListMultiAccountResourceGroupsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
     /**
      * @return resourceGroups
      */
-    public java.util.List < ResourceGroups> getResourceGroups() {
+    public java.util.List<ResourceGroups> getResourceGroups() {
         return this.resourceGroups;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ResourceGroups> resourceGroups; 
+        private java.util.List<ResourceGroups> resourceGroups; 
 
         /**
          * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
@@ -86,7 +91,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         /**
          * <p>The information about the resource groups.</p>
          */
-        public Builder resourceGroups(java.util.List < ResourceGroups> resourceGroups) {
+        public Builder resourceGroups(java.util.List<ResourceGroups> resourceGroups) {
             this.resourceGroups = resourceGroups;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListMultiAccountTagValuesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TagValues")
-    private java.util.List < String > tagValues;
+    private java.util.List<String> tagValues;
 
     private ListMultiAccountTagValuesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class ListMultiAccountTagValuesResponseBody extends TeaModel {
     /**
      * @return tagValues
      */
-    public java.util.List < String > getTagValues() {
+    public java.util.List<String> getTagValues() {
         return this.tagValues;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < String > tagValues; 
+        private java.util.List<String> tagValues; 
 
         /**
          * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
@@ -86,7 +91,7 @@ public class ListMultiAccountTagValuesResponseBody extends TeaModel {
         /**
          * <p>The tag values.</p>
          */
-        public Builder tagValues(java.util.List < String > tagValues) {
+        public Builder tagValues(java.util.List<String> tagValues) {
             this.tagValues = tagValues;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class ListMultiAccountResourceGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupIds")
-    private java.util.List < String > resourceGroupIds;
+    private java.util.List<String> resourceGroupIds;
 
     private ListMultiAccountResourceGroupsRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class ListMultiAccountResourceGroupsRequest extends Request {
     /**
      * @return resourceGroupIds
      */
-    public java.util.List < String > getResourceGroupIds() {
+    public java.util.List<String> getResourceGroupIds() {
         return this.resourceGroupIds;
     }
 
@@ -82,7 +87,7 @@ public class ListMultiAccountResourceGroupsRequest extends Request {
         private String accountId; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > resourceGroupIds; 
+        private java.util.List<String> resourceGroupIds; 
 
         private Builder() {
             super();
@@ -137,7 +142,7 @@ public class ListMultiAccountResourceGroupsRequest extends Request {
         /**
          * <p>The IDs of resource groups.</p>
          */
-        public Builder resourceGroupIds(java.util.List < String > resourceGroupIds) {
+        public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);
             this.resourceGroupIds = resourceGroupIds;
             return this;

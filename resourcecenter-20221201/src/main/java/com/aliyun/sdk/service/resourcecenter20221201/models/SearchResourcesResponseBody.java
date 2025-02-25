@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SearchResourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -25,7 +30,7 @@ public class SearchResourcesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     private SearchResourcesResponseBody(Builder builder) {
         this.filters = builder.filters;
@@ -46,7 +51,7 @@ public class SearchResourcesResponseBody extends TeaModel {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -74,21 +79,21 @@ public class SearchResourcesResponseBody extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
     public static final class Builder {
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
 
         /**
          * <p>The filter conditions.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.filters = filters;
             return this;
         }
@@ -129,7 +134,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         /**
          * <p>The information about the resources.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
             return this;
         }
@@ -154,7 +159,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         private String matchType;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Filters(Builder builder) {
             this.key = builder.key;
@@ -187,14 +192,14 @@ public class SearchResourcesResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String key; 
             private String matchType; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
              * <p>The key of the filter condition.</p>
@@ -221,7 +226,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             /**
              * <p>The values of the filter condition.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -420,10 +425,10 @@ public class SearchResourcesResponseBody extends TeaModel {
         private String expireTime;
 
         @com.aliyun.core.annotation.NameInMap("IpAddressAttributes")
-        private java.util.List < IpAddressAttributes> ipAddressAttributes;
+        private java.util.List<IpAddressAttributes> ipAddressAttributes;
 
         @com.aliyun.core.annotation.NameInMap("IpAddresses")
-        private java.util.List < String > ipAddresses;
+        private java.util.List<String> ipAddresses;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -441,7 +446,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         private String resourceType;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
@@ -493,14 +498,14 @@ public class SearchResourcesResponseBody extends TeaModel {
         /**
          * @return ipAddressAttributes
          */
-        public java.util.List < IpAddressAttributes> getIpAddressAttributes() {
+        public java.util.List<IpAddressAttributes> getIpAddressAttributes() {
             return this.ipAddressAttributes;
         }
 
         /**
          * @return ipAddresses
          */
-        public java.util.List < String > getIpAddresses() {
+        public java.util.List<String> getIpAddresses() {
             return this.ipAddresses;
         }
 
@@ -542,7 +547,7 @@ public class SearchResourcesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -557,14 +562,14 @@ public class SearchResourcesResponseBody extends TeaModel {
             private String accountId; 
             private String createTime; 
             private String expireTime; 
-            private java.util.List < IpAddressAttributes> ipAddressAttributes; 
-            private java.util.List < String > ipAddresses; 
+            private java.util.List<IpAddressAttributes> ipAddressAttributes; 
+            private java.util.List<String> ipAddresses; 
             private String regionId; 
             private String resourceGroupId; 
             private String resourceId; 
             private String resourceName; 
             private String resourceType; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String zoneId; 
 
             /**
@@ -606,7 +611,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             /**
              * <p>The attributes of the IP address.</p>
              */
-            public Builder ipAddressAttributes(java.util.List < IpAddressAttributes> ipAddressAttributes) {
+            public Builder ipAddressAttributes(java.util.List<IpAddressAttributes> ipAddressAttributes) {
                 this.ipAddressAttributes = ipAddressAttributes;
                 return this;
             }
@@ -617,7 +622,7 @@ public class SearchResourcesResponseBody extends TeaModel {
              * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
              * </blockquote>
              */
-            public Builder ipAddresses(java.util.List < String > ipAddresses) {
+            public Builder ipAddresses(java.util.List<String> ipAddresses) {
                 this.ipAddresses = ipAddresses;
                 return this;
             }
@@ -680,7 +685,7 @@ public class SearchResourcesResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

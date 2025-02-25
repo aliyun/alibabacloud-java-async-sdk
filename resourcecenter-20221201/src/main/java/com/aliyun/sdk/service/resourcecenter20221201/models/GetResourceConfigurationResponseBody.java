@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
     private String accountId;
 
     @com.aliyun.core.annotation.NameInMap("Configuration")
-    private java.util.Map < String, ? > configuration;
+    private java.util.Map<String, ?> configuration;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -25,10 +30,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
     private String expireTime;
 
     @com.aliyun.core.annotation.NameInMap("IpAddressAttributes")
-    private java.util.List < IpAddressAttributes> ipAddressAttributes;
+    private java.util.List<IpAddressAttributes> ipAddressAttributes;
 
     @com.aliyun.core.annotation.NameInMap("IpAddresses")
-    private java.util.List < String > ipAddresses;
+    private java.util.List<String> ipAddresses;
 
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -49,7 +54,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
     private String resourceType;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
@@ -89,7 +94,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
     /**
      * @return configuration
      */
-    public java.util.Map < String, ? > getConfiguration() {
+    public java.util.Map<String, ?> getConfiguration() {
         return this.configuration;
     }
 
@@ -110,14 +115,14 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
     /**
      * @return ipAddressAttributes
      */
-    public java.util.List < IpAddressAttributes> getIpAddressAttributes() {
+    public java.util.List<IpAddressAttributes> getIpAddressAttributes() {
         return this.ipAddressAttributes;
     }
 
     /**
      * @return ipAddresses
      */
-    public java.util.List < String > getIpAddresses() {
+    public java.util.List<String> getIpAddresses() {
         return this.ipAddresses;
     }
 
@@ -166,7 +171,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -179,18 +184,18 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
 
     public static final class Builder {
         private String accountId; 
-        private java.util.Map < String, ? > configuration; 
+        private java.util.Map<String, ?> configuration; 
         private String createTime; 
         private String expireTime; 
-        private java.util.List < IpAddressAttributes> ipAddressAttributes; 
-        private java.util.List < String > ipAddresses; 
+        private java.util.List<IpAddressAttributes> ipAddressAttributes; 
+        private java.util.List<String> ipAddresses; 
         private String regionId; 
         private String requestId; 
         private String resourceGroupId; 
         private String resourceId; 
         private String resourceName; 
         private String resourceType; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String zoneId; 
 
         /**
@@ -207,7 +212,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         /**
          * <p>The configurations of the resource.</p>
          */
-        public Builder configuration(java.util.Map < String, ? > configuration) {
+        public Builder configuration(java.util.Map<String, ?> configuration) {
             this.configuration = configuration;
             return this;
         }
@@ -237,7 +242,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         /**
          * <p>The attributes of the IP address.</p>
          */
-        public Builder ipAddressAttributes(java.util.List < IpAddressAttributes> ipAddressAttributes) {
+        public Builder ipAddressAttributes(java.util.List<IpAddressAttributes> ipAddressAttributes) {
             this.ipAddressAttributes = ipAddressAttributes;
             return this;
         }
@@ -248,7 +253,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
          * <p>Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
          * </blockquote>
          */
-        public Builder ipAddresses(java.util.List < String > ipAddresses) {
+        public Builder ipAddresses(java.util.List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
@@ -322,7 +327,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         /**
          * <p>The tags of the resource.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }

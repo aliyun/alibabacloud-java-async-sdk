@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListTagKeysResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TagKeys")
-    private java.util.List < String > tagKeys;
+    private java.util.List<String> tagKeys;
 
     private ListTagKeysResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class ListTagKeysResponseBody extends TeaModel {
     /**
      * @return tagKeys
      */
-    public java.util.List < String > getTagKeys() {
+    public java.util.List<String> getTagKeys() {
         return this.tagKeys;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < String > tagKeys; 
+        private java.util.List<String> tagKeys; 
 
         /**
          * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
@@ -86,7 +91,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         /**
          * <p>The tag keys.</p>
          */
-        public Builder tagKeys(java.util.List < String > tagKeys) {
+        public Builder tagKeys(java.util.List<String> tagKeys) {
             this.tagKeys = tagKeys;
             return this;
         }
