@@ -73,7 +73,7 @@ public class ListLoadBalancerRegionsRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>Page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -85,7 +85,7 @@ public class ListLoadBalancerRegionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>Page size.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>

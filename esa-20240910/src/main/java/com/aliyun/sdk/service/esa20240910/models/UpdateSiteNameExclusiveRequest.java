@@ -75,7 +75,7 @@ public class UpdateSiteNameExclusiveRequest extends Request {
         } 
 
         /**
-         * <p>Function switch. Possible values:</p>
+         * <p>Feature switch. Possible values:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>

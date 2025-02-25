@@ -115,7 +115,10 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * <p>The time granularity of the queried data, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(Integer dataInterval) {
             this.dataInterval = dataInterval;
@@ -123,7 +126,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         }
 
         /**
-         * DataModule.
+         * <p>Application layer time trend data list.</p>
          */
         public Builder dataModule(java.util.List<DataModule> dataModule) {
             this.dataModule = dataModule;
@@ -131,7 +134,11 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query.</p>
+         * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-19T19:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -139,7 +146,10 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         }
 
         /**
-         * RecordId.
+         * <p>Record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86510927836942****</p>
          */
         public Builder recordId(Long recordId) {
             this.recordId = recordId;
@@ -147,7 +157,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
@@ -158,7 +168,10 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>Site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -166,7 +179,11 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query.</p>
+         * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-19T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -248,7 +265,10 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Attack.
+             * <p>Attack QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder attack(Long attack) {
                 this.attack = attack;
@@ -256,7 +276,10 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
             }
 
             /**
-             * Normal.
+             * <p>Normal QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder normal(Long normal) {
                 this.normal = normal;
@@ -264,7 +287,10 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>Data time, following ISO8601 notation and using UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-19T16:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -272,7 +298,10 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>Total QPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder total(Long total) {
                 this.total = total;

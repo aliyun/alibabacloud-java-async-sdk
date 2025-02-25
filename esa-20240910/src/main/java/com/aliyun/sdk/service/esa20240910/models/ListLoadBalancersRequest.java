@@ -130,7 +130,14 @@ public class ListLoadBalancersRequest extends Request {
         } 
 
         /**
-         * MatchType.
+         * <p>Name matching strategy when querying by name:</p>
+         * <ul>
+         * <li>fuzzy: Fuzzy match;</li>
+         * <li>exact: Exact match, equivalent to an equality query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fuzzy</p>
          */
         public Builder matchType(String matchType) {
             this.putQueryParameter("MatchType", matchType);
@@ -139,7 +146,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Name of the load balancer, which can be used for querying by name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb.example.com</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -148,7 +158,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>Sorting field, currently only supports sorting by id. &quot;id&quot; indicates ascending order by id, &quot;-id&quot; indicates descending order by id. The id is positively correlated with the creation time. If not provided, it defaults to descending order by id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -157,7 +170,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number for paginated queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +182,10 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size for paginated queries, with a value range of 1-500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,6 +194,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

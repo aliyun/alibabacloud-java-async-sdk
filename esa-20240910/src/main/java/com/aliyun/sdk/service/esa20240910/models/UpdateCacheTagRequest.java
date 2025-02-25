@@ -131,7 +131,7 @@ public class UpdateCacheTagRequest extends Request {
         }
 
         /**
-         * <p>The version number of the site configuration. For sites with version management enabled, this parameter can specify the effective version of the site configuration, defaulting to version 0.</p>
+         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -143,7 +143,7 @@ public class UpdateCacheTagRequest extends Request {
         }
 
         /**
-         * <p>Custom Cache Tag name.</p>
+         * <p>Custom CacheTag name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

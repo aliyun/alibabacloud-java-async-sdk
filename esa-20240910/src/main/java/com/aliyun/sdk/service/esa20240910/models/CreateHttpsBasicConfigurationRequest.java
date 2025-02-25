@@ -242,7 +242,10 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         } 
 
         /**
-         * Ciphersuite.
+         * <p>Custom cipher suite, indicating the specific encryption algorithm selected when CiphersuiteGroup is set to custom.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</p>
          */
         public Builder ciphersuite(String ciphersuite) {
             this.putQueryParameter("Ciphersuite", ciphersuite);
@@ -251,7 +254,15 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * CiphersuiteGroup.
+         * <p>Cipher suite group. Default is all cipher suites. Possible values:</p>
+         * <ul>
+         * <li>all: All cipher suites.</li>
+         * <li>strict: Strong cipher suites.</li>
+         * <li>custom: Custom cipher suites.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder ciphersuiteGroup(String ciphersuiteGroup) {
             this.putQueryParameter("CiphersuiteGroup", ciphersuiteGroup);
@@ -260,7 +271,14 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * Http2.
+         * <p>Whether to enable HTTP2. Default is enabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder http2(String http2) {
             this.putQueryParameter("Http2", http2);
@@ -269,7 +287,14 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * Http3.
+         * <p>Whether to enable HTTP3. Default is enabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder http3(String http3) {
             this.putQueryParameter("Http3", http3);
@@ -278,7 +303,14 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * Https.
+         * <p>Whether to enable HTTPS. Default is enabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder https(String https) {
             this.putQueryParameter("Https", https);
@@ -287,7 +319,14 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * OcspStapling.
+         * <p>Whether to enable OCSP. Default is disabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ocspStapling(String ocspStapling) {
             this.putQueryParameter("OcspStapling", ocspStapling);
@@ -296,7 +335,10 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * Rule.
+         * <p>Rule content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -305,7 +347,14 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>Rule switch. Possible values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -314,7 +363,10 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -323,6 +375,7 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
+         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -335,7 +388,14 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * Tls10.
+         * <p>Whether to enable TLS1.0. Default is disabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder tls10(String tls10) {
             this.putQueryParameter("Tls10", tls10);
@@ -344,7 +404,14 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * Tls11.
+         * <p>Whether to enable TLS1.1. Default is enabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder tls11(String tls11) {
             this.putQueryParameter("Tls11", tls11);
@@ -353,7 +420,14 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * Tls12.
+         * <p>Whether to enable TLS1.2. Default is enabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder tls12(String tls12) {
             this.putQueryParameter("Tls12", tls12);
@@ -362,7 +436,14 @@ public class CreateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * Tls13.
+         * <p>Whether to enable TLS1.3. Default is enabled. Possible values:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder tls13(String tls13) {
             this.putQueryParameter("Tls13", tls13);

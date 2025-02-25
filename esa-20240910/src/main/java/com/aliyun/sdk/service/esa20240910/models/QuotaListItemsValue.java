@@ -55,7 +55,7 @@ public class QuotaListItemsValue extends TeaModel {
         private WafQuotaString value; 
 
         /**
-         * <p>Indicates whether the item type is configured in the custom list.</p>
+         * <p>The switch for the type of item in the custom list.</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -63,7 +63,7 @@ public class QuotaListItemsValue extends TeaModel {
         }
 
         /**
-         * <p>The format restrictions for the item type in the custom list.</p>
+         * <p>Format restrictions for the type of item in the custom list.</p>
          */
         public Builder value(WafQuotaString value) {
             this.value = value;

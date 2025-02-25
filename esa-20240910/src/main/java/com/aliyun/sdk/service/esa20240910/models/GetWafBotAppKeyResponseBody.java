@@ -55,7 +55,7 @@ public class GetWafBotAppKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The application key.</p>
+         * <p>Application key.</p>
          * 
          * <strong>example:</strong>
          * <p>example_appkey</p>
@@ -66,7 +66,7 @@ public class GetWafBotAppKeyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>

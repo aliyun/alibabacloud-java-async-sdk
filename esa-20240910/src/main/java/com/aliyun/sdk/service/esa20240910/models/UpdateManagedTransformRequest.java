@@ -147,7 +147,7 @@ public class UpdateManagedTransformRequest extends Request {
         }
 
         /**
-         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default is version 0.</p>
+         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration will take effect, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

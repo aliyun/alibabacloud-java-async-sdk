@@ -55,7 +55,10 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * <p>Load Balancer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99867648760****</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -63,7 +66,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>

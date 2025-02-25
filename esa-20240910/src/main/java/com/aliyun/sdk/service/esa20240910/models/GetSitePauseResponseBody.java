@@ -55,9 +55,9 @@ public class GetSitePauseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>Whether the acceleration has been paused. Value range: </p>
+         * <p>Indicates whether acceleration has been paused. Possible values:</p>
          * <ul>
-         * <li>true: The site acceleration has been paused. </li>
+         * <li>true: The site&quot;s acceleration is paused.</li>
          * <li>false: The site is accelerating normally.</li>
          * </ul>
          * 
