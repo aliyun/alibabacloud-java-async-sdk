@@ -890,6 +890,220 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
      *
      * <p>DescribeUserResourcesResponseBody</p>
      */
+    public static class Packages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Kb")
+        private String kb;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
+        private Packages(Builder builder) {
+            this.description = builder.description;
+            this.kb = builder.kb;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Packages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return kb
+         */
+        public String getKb() {
+            return this.kb;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String kb; 
+            private String title; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Kb.
+             */
+            public Builder kb(String kb) {
+                this.kb = kb;
+                return this;
+            }
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public Packages build() {
+                return new Packages(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeUserResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserResourcesResponseBody</p>
+     */
+    public static class OsUpdate extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CheckId")
+        private String checkId;
+
+        @com.aliyun.core.annotation.NameInMap("KbListString")
+        private String kbListString;
+
+        @com.aliyun.core.annotation.NameInMap("PackageCount")
+        private Integer packageCount;
+
+        @com.aliyun.core.annotation.NameInMap("Packages")
+        private java.util.List<Packages> packages;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateCatalogUrl")
+        private String updateCatalogUrl;
+
+        private OsUpdate(Builder builder) {
+            this.checkId = builder.checkId;
+            this.kbListString = builder.kbListString;
+            this.packageCount = builder.packageCount;
+            this.packages = builder.packages;
+            this.updateCatalogUrl = builder.updateCatalogUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OsUpdate create() {
+            return builder().build();
+        }
+
+        /**
+         * @return checkId
+         */
+        public String getCheckId() {
+            return this.checkId;
+        }
+
+        /**
+         * @return kbListString
+         */
+        public String getKbListString() {
+            return this.kbListString;
+        }
+
+        /**
+         * @return packageCount
+         */
+        public Integer getPackageCount() {
+            return this.packageCount;
+        }
+
+        /**
+         * @return packages
+         */
+        public java.util.List<Packages> getPackages() {
+            return this.packages;
+        }
+
+        /**
+         * @return updateCatalogUrl
+         */
+        public String getUpdateCatalogUrl() {
+            return this.updateCatalogUrl;
+        }
+
+        public static final class Builder {
+            private String checkId; 
+            private String kbListString; 
+            private Integer packageCount; 
+            private java.util.List<Packages> packages; 
+            private String updateCatalogUrl; 
+
+            /**
+             * CheckId.
+             */
+            public Builder checkId(String checkId) {
+                this.checkId = checkId;
+                return this;
+            }
+
+            /**
+             * KbListString.
+             */
+            public Builder kbListString(String kbListString) {
+                this.kbListString = kbListString;
+                return this;
+            }
+
+            /**
+             * PackageCount.
+             */
+            public Builder packageCount(Integer packageCount) {
+                this.packageCount = packageCount;
+                return this;
+            }
+
+            /**
+             * Packages.
+             */
+            public Builder packages(java.util.List<Packages> packages) {
+                this.packages = packages;
+                return this;
+            }
+
+            /**
+             * UpdateCatalogUrl.
+             */
+            public Builder updateCatalogUrl(String updateCatalogUrl) {
+                this.updateCatalogUrl = updateCatalogUrl;
+                return this;
+            }
+
+            public OsUpdate build() {
+                return new OsUpdate(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeUserResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserResourcesResponseBody</p>
+     */
     public static class Sessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceSessionStartTime")
         private String resourceSessionStartTime;
@@ -1035,6 +1249,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GlobalStatus")
         private Boolean globalStatus;
 
+        @com.aliyun.core.annotation.NameInMap("HasUpgrade")
+        private Boolean hasUpgrade;
+
         @com.aliyun.core.annotation.NameInMap("HibernationBeta")
         private Boolean hibernationBeta;
 
@@ -1064,6 +1281,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
+
+        @com.aliyun.core.annotation.NameInMap("OsUpdate")
+        private OsUpdate osUpdate;
 
         @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
@@ -1145,6 +1365,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             this.externalUserId = builder.externalUserId;
             this.fotaUpdate = builder.fotaUpdate;
             this.globalStatus = builder.globalStatus;
+            this.hasUpgrade = builder.hasUpgrade;
             this.hibernationBeta = builder.hibernationBeta;
             this.icon = builder.icon;
             this.lastStartTime = builder.lastStartTime;
@@ -1155,6 +1376,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             this.os = builder.os;
             this.osDescription = builder.osDescription;
             this.osType = builder.osType;
+            this.osUpdate = builder.osUpdate;
             this.productType = builder.productType;
             this.protocolType = builder.protocolType;
             this.realDesktopId = builder.realDesktopId;
@@ -1319,6 +1541,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return hasUpgrade
+         */
+        public Boolean getHasUpgrade() {
+            return this.hasUpgrade;
+        }
+
+        /**
          * @return hibernationBeta
          */
         public Boolean getHibernationBeta() {
@@ -1386,6 +1615,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
          */
         public String getOsType() {
             return this.osType;
+        }
+
+        /**
+         * @return osUpdate
+         */
+        public OsUpdate getOsUpdate() {
+            return this.osUpdate;
         }
 
         /**
@@ -1548,6 +1784,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             private String externalUserId; 
             private FotaUpdate fotaUpdate; 
             private Boolean globalStatus; 
+            private Boolean hasUpgrade; 
             private Boolean hibernationBeta; 
             private String icon; 
             private String lastStartTime; 
@@ -1558,6 +1795,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             private String os; 
             private String osDescription; 
             private String osType; 
+            private OsUpdate osUpdate; 
             private String productType; 
             private String protocolType; 
             private String realDesktopId; 
@@ -1732,6 +1970,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             }
 
             /**
+             * HasUpgrade.
+             */
+            public Builder hasUpgrade(Boolean hasUpgrade) {
+                this.hasUpgrade = hasUpgrade;
+                return this;
+            }
+
+            /**
              * HibernationBeta.
              */
             public Builder hibernationBeta(Boolean hibernationBeta) {
@@ -1808,6 +2054,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
              */
             public Builder osType(String osType) {
                 this.osType = osType;
+                return this;
+            }
+
+            /**
+             * OsUpdate.
+             */
+            public Builder osUpdate(OsUpdate osUpdate) {
+                this.osUpdate = osUpdate;
                 return this;
             }
 
