@@ -161,6 +161,9 @@ public class RealTimeDialogResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("intentionScript")
         private String intentionScript;
 
+        @com.aliyun.core.annotation.NameInMap("interrupt")
+        private Boolean interrupt;
+
         @com.aliyun.core.annotation.NameInMap("recommendIntention")
         private String recommendIntention;
 
@@ -180,6 +183,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
             this.intentionCode = builder.intentionCode;
             this.intentionName = builder.intentionName;
             this.intentionScript = builder.intentionScript;
+            this.interrupt = builder.interrupt;
             this.recommendIntention = builder.recommendIntention;
             this.recommendScript = builder.recommendScript;
             this.selfDirectedScript = builder.selfDirectedScript;
@@ -237,6 +241,13 @@ public class RealTimeDialogResponseBody extends TeaModel {
         }
 
         /**
+         * @return interrupt
+         */
+        public Boolean getInterrupt() {
+            return this.interrupt;
+        }
+
+        /**
          * @return recommendIntention
          */
         public String getRecommendIntention() {
@@ -271,6 +282,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
             private String intentionCode; 
             private String intentionName; 
             private String intentionScript; 
+            private Boolean interrupt; 
             private String recommendIntention; 
             private String recommendScript; 
             private String selfDirectedScript; 
@@ -324,6 +336,14 @@ public class RealTimeDialogResponseBody extends TeaModel {
              */
             public Builder intentionScript(String intentionScript) {
                 this.intentionScript = intentionScript;
+                return this;
+            }
+
+            /**
+             * interrupt.
+             */
+            public Builder interrupt(Boolean interrupt) {
+                this.interrupt = interrupt;
                 return this;
             }
 
@@ -391,6 +411,9 @@ public class RealTimeDialogResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("intentionScript")
         private String intentionScript;
 
+        @com.aliyun.core.annotation.NameInMap("interrupt")
+        private Boolean interrupt;
+
         @com.aliyun.core.annotation.NameInMap("recommendIntention")
         private String recommendIntention;
 
@@ -410,6 +433,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
             this.intentionCode = builder.intentionCode;
             this.intentionName = builder.intentionName;
             this.intentionScript = builder.intentionScript;
+            this.interrupt = builder.interrupt;
             this.recommendIntention = builder.recommendIntention;
             this.recommendScript = builder.recommendScript;
             this.selfDirectedScript = builder.selfDirectedScript;
@@ -467,6 +491,13 @@ public class RealTimeDialogResponseBody extends TeaModel {
         }
 
         /**
+         * @return interrupt
+         */
+        public Boolean getInterrupt() {
+            return this.interrupt;
+        }
+
+        /**
          * @return recommendIntention
          */
         public String getRecommendIntention() {
@@ -501,6 +532,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
             private String intentionCode; 
             private String intentionName; 
             private String intentionScript; 
+            private Boolean interrupt; 
             private String recommendIntention; 
             private String recommendScript; 
             private String selfDirectedScript; 
@@ -554,6 +586,14 @@ public class RealTimeDialogResponseBody extends TeaModel {
              */
             public Builder intentionScript(String intentionScript) {
                 this.intentionScript = intentionScript;
+                return this;
+            }
+
+            /**
+             * interrupt.
+             */
+            public Builder interrupt(Boolean interrupt) {
+                this.interrupt = interrupt;
                 return this;
             }
 
