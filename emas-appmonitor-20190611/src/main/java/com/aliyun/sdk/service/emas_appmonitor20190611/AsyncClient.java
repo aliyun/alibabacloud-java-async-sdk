@@ -25,4 +25,22 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetErrorResponse> getError(GetErrorRequest request);
 
+    /**
+     * @param request the request parameters of GetErrors  GetErrorsRequest
+     * @return GetErrorsResponse
+     */
+    CompletableFuture<GetErrorsResponse> getErrors(GetErrorsRequest request);
+
+    /**
+     * @param request the request parameters of GetIssue  GetIssueRequest
+     * @return GetIssueResponse
+     */
+    CompletableFuture<GetIssueResponse> getIssue(GetIssueRequest request);
+
+    /**
+     * @param request the request parameters of GetIssues  GetIssuesRequest
+     * @return GetIssuesResponse
+     */
+    CompletableFuture<GetIssuesResponse> getIssues(GetIssuesRequest request);
+
 }
