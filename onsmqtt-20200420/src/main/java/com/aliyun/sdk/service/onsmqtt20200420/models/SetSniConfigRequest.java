@@ -112,7 +112,11 @@ public class SetSniConfigRequest extends Request {
         }
 
         /**
+         * <p>The default certificate. If the domain name that you access cannot match the certificates of the broker, the default certificate is returned.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1533xxxx-cn-hangzhou</p>
          */
         public Builder defaultCertificate(String defaultCertificate) {
             this.putQueryParameter("DefaultCertificate", defaultCertificate);
@@ -121,7 +125,11 @@ public class SetSniConfigRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mqtt-cn-5yd3xxx</p>
          */
         public Builder mqttInstanceId(String mqttInstanceId) {
             this.putQueryParameter("MqttInstanceId", mqttInstanceId);
@@ -130,7 +138,10 @@ public class SetSniConfigRequest extends Request {
         }
 
         /**
-         * SniConfig.
+         * <p>The Server Name Indication (SNI) configuration. This parameter is used to map domain names and certificates. Format: Domain name#Certificate ID#Password (if available);Domain name#Certificate ID#Password (if available).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.mqtt.aliyuncs.com#15xxxxx-cn-hangzhou;mqtt-test.mqtt.aliyuncs.com#15xxxx9-cn-hangzhou</p>
          */
         public Builder sniConfig(String sniConfig) {
             this.putQueryParameter("SniConfig", sniConfig);

@@ -135,7 +135,7 @@ public class AddCustomAuthPermissionRequest extends Request {
         } 
 
         /**
-         * <p>Specify whether to allow or deny the permissions.</p>
+         * <p>Specifies whether to allow or deny access.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class AddCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * <p>The permissions that you want to add.</p>
+         * <p>The permissions that you want to grant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class AddCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * <p>The topic on which you want to add the permissions. Multi-level topics and wildcard characters are supported.</p>
+         * <p>The topics on which you want to grant permissions. Multi-level topics and wildcard characters are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

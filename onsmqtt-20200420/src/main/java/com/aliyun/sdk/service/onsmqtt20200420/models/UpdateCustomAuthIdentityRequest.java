@@ -189,7 +189,7 @@ public class UpdateCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * <p>The signature verification mode. ORIGIN: compares the password and AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</p>
+         * <p>The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class UpdateCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * <p>The username.</p>
+         * <p>The username. The value cannot exceed 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

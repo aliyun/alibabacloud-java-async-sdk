@@ -38,6 +38,7 @@ public class AddCustomAuthIdentityRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SignMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signMode;
 
     @com.aliyun.core.annotation.Body
@@ -145,7 +146,11 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * <p>The identity type. Valid values: USER and CLIENT.</p>
+         * <p>The identity type. Valid values:</p>
+         * <ul>
+         * <li>USER</li>
+         * <li>CLIENT</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +190,7 @@ public class AddCustomAuthIdentityRequest extends Request {
 
         /**
          * <p>The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>SIGNED</p>

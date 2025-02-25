@@ -75,7 +75,10 @@ public class SetSniConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4581CCF-62AF-44D9-B5B4-D1DQDC0E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
