@@ -90,7 +90,7 @@ public class ClonePolicyGroupRequest extends Request {
         } 
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The name of the cloud computer policy that you want to create.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class ClonePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy that you want to clone.</p>
+         * <p>The ID of the destination cloud computer policy that you want to clone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class ClonePolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

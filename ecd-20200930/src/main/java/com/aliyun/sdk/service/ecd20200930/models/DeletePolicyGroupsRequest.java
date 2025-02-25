@@ -75,7 +75,7 @@ public class DeletePolicyGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the policy. You can specify 1 to 100 policy IDs.</p>
+         * <p>The cloud computer policy IDs. You can specify 1 to 100 policies.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeletePolicyGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by EDS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

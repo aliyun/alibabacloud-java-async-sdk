@@ -103,7 +103,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cloud desktop. You can specify one or more desktop IDs. The value is a JSON array.</p>
+         * <p>The cloud computer IDs. You can specify one or more cloud computers IDs. The value is a JSON array.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,10 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The ID of the cloud computer policy that you want to associate with cloud computers.</p>
+         * <blockquote>
+         * <p> If the <code>PolicyGroupIds</code> parameter is used, ignore the current parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>pg-gx2x1dhsmthe9****</p>
@@ -128,7 +131,10 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>策略ID列表。</p>
+         * <p>The IDs of the cloud computer policies that you want to associate with cloud computers.</p>
+         * <blockquote>
+         * <p> You can specify up to one cloud computer policy that takes effect globally, and up to four cloud computer policies that apply to specific IP addresses. If you specify more than one cloud computer policy that takes effect globally, only the policy first associate with the cloud computer can take effect.</p>
+         * </blockquote>
          */
         public Builder policyGroupIds(java.util.List<String> policyGroupIds) {
             this.putQueryParameter("PolicyGroupIds", policyGroupIds);
@@ -137,7 +143,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

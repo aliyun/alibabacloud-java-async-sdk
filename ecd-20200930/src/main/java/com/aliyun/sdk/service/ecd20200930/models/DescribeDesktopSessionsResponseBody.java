@@ -78,7 +78,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the session.</p>
+         * <p>Details of sessions.</p>
          */
         public Builder sessions(java.util.List<Sessions> sessions) {
             this.sessions = sessions;
@@ -461,7 +461,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * OsSessionStatus.
+             * <p>Indicates whether the switch to check session status of cloud computers is turned on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder osSessionStatus(String osSessionStatus) {
                 this.osSessionStatus = osSessionStatus;
@@ -550,7 +553,17 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * SubPayType.
+             * <p>The billing method of cloud computers.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>duration: hourly plan (available for users in the whitelist)</li>
+             * <li>postPaid: pay-as-you-go</li>
+             * <li>monthPackage: monthly subscription (120-hour computing plan and 250-hour computing plan)</li>
+             * <li>prePaid: monthly subscription (Unlimited computing plan)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>monthPackage</p>
              */
             public Builder subPayType(String subPayType) {
                 this.subPayType = subPayType;
