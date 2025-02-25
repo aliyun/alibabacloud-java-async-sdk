@@ -157,7 +157,14 @@ public class ListResourcesRequest extends Request {
         } 
 
         /**
-         * Order.
+         * <p>The sorting order. Valid values:</p>
+         * <ul>
+         * <li>Desc</li>
+         * <li>Asc</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -214,7 +221,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * ResourceStatus.
+         * <p>The resource group status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceReady</p>
          */
         public Builder resourceStatus(String resourceStatus) {
             this.putQueryParameter("ResourceStatus", resourceStatus);
@@ -239,7 +249,23 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * Sort.
+         * <p>The condition by which the results are sorted. By default, the query results are sorted by the timestamp type in descending order.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PrePaidInstanceCount</li>
+         * <li>CpuCount</li>
+         * <li>Memory</li>
+         * <li>CreateTime</li>
+         * <li>PostPaidInstanceCount</li>
+         * <li>MemoryUsed</li>
+         * <li>GpuCount</li>
+         * <li>GpuUsed</li>
+         * <li>CpuUsed</li>
+         * <li>ServiceCount</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);

@@ -158,7 +158,7 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance in a resource group. For more information about how to query the instance name, see <a href="https://help.aliyun.com/document_detail/412129.html">ListResourceInstances</a>.</p>
+         * <p>The name of the instance in a resource group. For more information about how to obtain the instance name, see <a href="https://help.aliyun.com/document_detail/412129.html">ListServiceInstances</a>. HostName in the returned result indicates the name of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,10 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * WorkerName.
+         * <p>The worker name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-fd95xxxxx-xxxxxx</p>
          */
         public Builder workerName(String workerName) {
             this.putQueryParameter("WorkerName", workerName);

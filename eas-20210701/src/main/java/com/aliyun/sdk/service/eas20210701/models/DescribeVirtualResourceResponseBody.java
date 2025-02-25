@@ -138,7 +138,10 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         }
 
         /**
-         * DisableSpotProtectionPeriod.
+         * <p>Indicates whether the retention period of preemptible instances was disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableSpotProtectionPeriod(Boolean disableSpotProtectionPeriod) {
             this.disableSpotProtectionPeriod = disableSpotProtectionPeriod;
@@ -165,7 +168,10 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceCount.
+         * <p>The number of deployed services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceCount(Integer serviceCount) {
             this.serviceCount = serviceCount;

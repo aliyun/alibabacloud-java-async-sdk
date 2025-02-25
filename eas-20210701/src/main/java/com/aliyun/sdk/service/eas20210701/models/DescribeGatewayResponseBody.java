@@ -358,7 +358,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * SSLRedirectionEnabled.
+         * <p>Indicates whether the HTTP to HTTPS redirection is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder SSLRedirectionEnabled(Boolean SSLRedirectionEnabled) {
             this.SSLRedirectionEnabled = SSLRedirectionEnabled;

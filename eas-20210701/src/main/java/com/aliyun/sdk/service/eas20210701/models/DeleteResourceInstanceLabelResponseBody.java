@@ -55,7 +55,10 @@ public class DeleteResourceInstanceLabelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -63,7 +66,10 @@ public class DeleteResourceInstanceLabelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

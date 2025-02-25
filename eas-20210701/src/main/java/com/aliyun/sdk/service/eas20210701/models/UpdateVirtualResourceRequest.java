@@ -143,7 +143,10 @@ public class UpdateVirtualResourceRequest extends Request {
         }
 
         /**
-         * DisableSpotProtectionPeriod.
+         * <p>Specifies whether to disable the retention period of preemptible instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableSpotProtectionPeriod(Boolean disableSpotProtectionPeriod) {
             this.putBodyParameter("DisableSpotProtectionPeriod", disableSpotProtectionPeriod);
@@ -152,9 +155,9 @@ public class UpdateVirtualResourceRequest extends Request {
         }
 
         /**
-         * <p>The list of resources in the virtual resource group.</p>
+         * <p>The resources in the virtual resource group.</p>
          * <blockquote>
-         * <p> If you specify this parameter, previous data are overwritten.</p>
+         * <p> If you specify this parameter, previous data is overwritten.</p>
          * </blockquote>
          */
         public Builder resources(java.util.List<Resources> resources) {
@@ -164,7 +167,7 @@ public class UpdateVirtualResourceRequest extends Request {
         }
 
         /**
-         * <p>The new name for the virtual resource group.</p>
+         * <p>The new name of the virtual resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>NewMyVirtualResource</p>
@@ -289,7 +292,7 @@ public class UpdateVirtualResourceRequest extends Request {
             }
 
             /**
-             * <p>The priority of resource scheduling. A greater number specifies a higher priority.</p>
+             * <p>The priority of resource scheduling. A greater number indicates a higher priority.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -300,7 +303,7 @@ public class UpdateVirtualResourceRequest extends Request {
             }
 
             /**
-             * <p>The Lingjun resource quota ID.</p>
+             * <p>The ID of the Lingjun resource quota.</p>
              * <blockquote>
              * <p> You must specify one and only one of the InstanceType, ResourceId, and QuotaId parameters.</p>
              * </blockquote>
@@ -314,7 +317,7 @@ public class UpdateVirtualResourceRequest extends Request {
             }
 
             /**
-             * <p>The region where the resource resides.</p>
+             * <p>The region in which the resource resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -325,7 +328,7 @@ public class UpdateVirtualResourceRequest extends Request {
             }
 
             /**
-             * <p>The ID of the dedicated resource group. For information about how to query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
+             * <p>The ID of the dedicated resource group. For information about how to obtain the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</p>
              * <blockquote>
              * <p> You must specify one and only one of the InstanceType, ResourceId, and QuotaId parameters.</p>
              * </blockquote>
@@ -341,7 +344,7 @@ public class UpdateVirtualResourceRequest extends Request {
             /**
              * <p>The maximum price of preemptible instances in a public resource group.</p>
              * <blockquote>
-             * <p> If you do not specify this parameter, preemptible instances are not used.</p>
+             * <p> If you leave this parameter empty, preemptible instances are not used.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
